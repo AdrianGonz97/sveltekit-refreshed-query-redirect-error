@@ -4,7 +4,7 @@ import { redirect } from "@sveltejs/kit";
 let count = 0;
 
 export const getCount = query(() => {
-	if (count > 5) redirect(303, "/reset");
+	if (count > 5) redirect(307, "/reset");
 
 	return count;
 });
